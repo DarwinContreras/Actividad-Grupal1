@@ -31,9 +31,18 @@
                     <div class="navbar-nav">
                         <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexPersonas')}}" onclick="loadView($(this));">Personas</a>
                         <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexAsistenciaPersonas')}}" onclick="loadView($(this));">Asistencias (Estudiantes)</a>
-                        <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexHorariosAyudantesBecarios')}}" onclick="loadView($(this));">Horarios (Ayudantes / Becarios)</a>
-                        <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexReportes')}}" onclick="loadView($(this));">Reportes generales</a>
-                        <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexReportesIndividuales')}}" onclick="loadView($(this));">Reportes individuales</a>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Reportes (Estudiantes)
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="nav-link dropdown-item" href="JavaScript:;" ajax-route="{{route('indexReportes')}}" onclick="loadView($(this));">Reportes generales</a></li>
+                                <li><a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexReportesIndividuales')}}" onclick="loadView($(this));">Reportes individuales</a></li>
+                            </ul>
+                        </li>
+
+                        <a class="nav-link" href="JavaScript:;" ajax-route="{{route('indexHorariosAyudantesBecarios')}}" onclick="loadView($(this));"> |  Horarios (Ayudantes / Becarios)</a>
                     </div>
                 </div>
             </div>
