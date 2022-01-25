@@ -32,6 +32,8 @@ class PersonasController extends Controller
             }
 
             if (!$error) {
+                $request['nombres'] = strtoupper( $request['nombres'] );
+                $request['apellidos'] = strtoupper( $request['apellidos'] );
                 $request['codigo'] = Str::random(10);
                 Personas::create($request->all());
                 $response['type'] = 'success';
@@ -65,6 +67,8 @@ class PersonasController extends Controller
             }
 
             if (!$error) {
+                $request['nombres'] = strtoupper( $request['nombres'] );
+                $request['apellidos'] = strtoupper( $request['apellidos'] );
                 $request['codigo'] = Str::random(10);
                 Personas::where('id', $id)->update($request->all());
                 $response['type'] = 'success';

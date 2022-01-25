@@ -16,7 +16,7 @@ function marcarAsistencia(object) {
         if (result.value) {
             $.ajax({
                 url: ajaxRoute,
-                type: "get",
+                type: "GET",
                 dataType: "json",
                 processData: false,
                 success: function(data) {

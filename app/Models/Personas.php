@@ -33,6 +33,7 @@ class Personas extends Model
     ];
 
     protected $PK = ['id'];
+    public $timestamps = true;
 
     public function getAsistencias()
     {
